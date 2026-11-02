@@ -1,0 +1,42 @@
+♡ 선영아 사랑해야 — 인터넷에 공개하는 방법 ♡
+
+이 압축 파일은 실시간 접속용 웹사이트입니다.
+'혼자 놀기' HTML 파일만 웹에 올리면 다른 사람과 실시간으로 연결되지 않습니다.
+아래 절차대로 Render의 Web Service로 배포해야 합니다.
+
+0. 준비: GitHub (https://github.com)와 Render (https://render.com) 계정을 만드세요.
+
+1. 이 ZIP 압축을 해제합니다.
+2. GitHub에서 New repository를 눌러 새 저장소를 만듭니다.
+   예) seonyeonga-saranghaeya
+3. GitHub 저장소에서 Add file → Upload files를 누릅니다.
+   'package.json', 'server.js', 'render.yaml', 'public' 폴더 등을 포함해,
+   압축 해제한 '배포용 파일들'을 올립니다.
+   (상위 폴더째 올리지 말고, 저장소 첫 화면에 package.json과 server.js가 보이도록 하세요.)
+   Commit changes를 눌러 저장합니다.
+4. Render에 로그인하고 New → Web Service를 선택합니다.
+5. GitHub와 연결하고 방금 만든 저장소를 선택합니다.
+6. 아래 항목을 확인합니다.
+   이름(Name): seonyeonga-saranghaeya (사용 중이면 다른 이름)
+   언어(Language): Node
+   Root Directory: 비워 두기
+   Build Command: npm install
+   Start Command: npm start
+   Instance Type/Compute Plan: Free (테스트용)
+   Region: Singapore (선택 가능할 때)
+7. Create Web Service를 눌러 배포합니다.
+8. Render 화면에 표시되는 실제 https://...onrender.com 주소를 복사하세요.
+   다른 휴대전화에서 그 주소에 접속해 인사/채팅/운동이 실시간으로 보이는지 확인하세요.
+
+주의
+- 사이트 주소는 사용자가 Render에서 생성한 뒤에야 정해집니다.
+- Render 무료 서비스는 15분간 요청이 없으면 잠들고, 다음 접속에 1분가량 걸릴 수 있습니다.
+- 무료 서버는 테스트용입니다. 운영 규모가 커지면 유료 서버, 관리/차단/신고 기능이 필요합니다.
+- 대화는 영구 저장되지 않습니다. 서버 재시작/잠듦 시 초기화됩니다.
+- 1번 방의 100명 제한은 한 서버 인스턴스 기준입니다.
+- 사진처럼 보이는 스타 배경은 실제 사진이 아닌 자체 제작 팬아트풍 그림입니다.
+
+공식 안내
+GitHub 업로드: https://docs.github.com/ko/repositories/working-with-files/managing-files/adding-a-file-to-a-repository
+Render 배포: https://render.com/docs/your-first-deploy
+Render 무료 플랜: https://render.com/docs/free

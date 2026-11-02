@@ -1,0 +1,9 @@
+{
+  "name": "seonyeonga-saranghaeya",
+  "version": "1.0.0",
+  "private": true,
+  "description": "선영아 사랑해야 — 4050 여성 익명 커뮤니티 MVP",
+  "scripts": { "start": "node server.js", "dev": "node --watch server.js" },
+  "engines": { "node": ">=20" },
+  "license": "UNLICENSED"
+}
