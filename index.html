@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f3ec" />
+  <meta name="description" content="선영아 사랑해야 — 우리 이름은 모두 ㄴㅁ. 4050 여성을 위한 익명 공간" />
+  <title>선영아 사랑해야 — 익명으로 함께하는 세 개의 방</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <div id="app">
+    <header class="site-header">
+      <a class="brand" href="/" id="homeBrand" aria-label="선영아 사랑해야 홈">
+        <span class="brand-flower" aria-hidden="true">✳</span>
+        <span>선영아 사랑해야<span class="brand-dot">.</span></span>
+      </a>
+      <div class="header-right"><span class="online-indicator"></span><span id="siteStatus">누구나, 익명으로</span></div>
+    </header>
+
+    <main id="lobby" class="lobby">
+      <div class="hero">
+        <div class="hero-orbit orbit-a"></div><div class="hero-orbit orbit-b"></div>
+        <div class="hero-text">
+          <p class="eyebrow">익명이어도, 함께라서 좋은 곳</p>
+          <h1>선영아,<br/><em>사랑해야.</em></h1>
+          <p class="hero-lead">우리 모두의 이름은 <strong>ㄴㅁ</strong>.<br/>인사만 해도 좋고, 수다를 떨어도 좋고,<br/>그냥 같은 공간에 있어도 좋아요.</p>
+          <div class="hero-pills"><span>✦ 회원가입 없음</span><span>✦ 전원 닉네임 ㄴㅁ</span><span>✦ 휴대폰에서도</span></div>
+        </div>
+        <div class="hero-sculpture" aria-hidden="true">
+          <div class="sculpture-halo"></div>
+          <div class="sculpture-text">ㄴㅁ</div>
+          <div class="sculpture-small">오늘도<br/>반가워요</div>
+          <span class="spark spark-1">✳</span><span class="spark spark-2">✺</span><span class="spark spark-3">✳</span>
+        </div>
+      </div>
+
+      <section class="room-selection" aria-labelledby="roomsTitle">
+        <div class="section-head"><div><p class="eyebrow">우리들의 작은 세계</p><h2 id="roomsTitle">오늘은 어디로 갈까요?</h2></div><span class="section-side-note">문을 열면 모두가 ㄴㅁ가 돼요 ↗</span></div>
+        <div class="room-grid">
+          <article class="room-card room-card-hello">
+            <div class="card-visual card-visual-hello">
+              <div class="mini-mountain mini-mountain-a"></div><div class="mini-mountain mini-mountain-b"></div><div class="mini-temple"><div class="mini-roof"></div><div class="mini-pavilion"><i></i><i></i><i></i></div></div>
+              <span class="floating-hello bubble-a">ㄴㅁ</span><span class="floating-hello bubble-b">ㄴㅁ</span><span class="floating-hello bubble-c">ㄴㅁ</span>
+              <span class="visual-label">ROOM 01</span>
+            </div>
+            <div class="card-content"><div class="card-title-row"><h3>ㄴㅁ 인사방</h3><span class="room-count"><span id="count-hello">0</span> / 100명</span></div>
+              <p>긴 말은 필요 없어요.<br/>서로에게 건네는 짧은 한마디, ㄴㅁ.</p>
+              <button class="enter-btn" data-room="hello">인사하러 들어가기 <span>↗</span></button>
+            </div>
+          </article>
+          <article class="room-card room-card-talk">
+            <div class="card-visual card-visual-talk">
+              <div class="mini-disc disc-a"><img src="./assets/celebs/sung-sikyung.jpg" alt="" /></div><div class="mini-disc disc-b"><img src="./assets/celebs/kang-dongwon.jpg" alt="" /></div><div class="mini-disc disc-c"><img src="./assets/celebs/seo-kangjun.jpg" alt="" /></div><div class="mini-disc disc-d"><img src="./assets/celebs/gong-yoo.jpg" alt="" /></div>
+              <div class="mini-talk-main">우리끼리<br/><em>수다 타임</em></div><span class="visual-label">ROOM 02</span>
+            </div>
+            <div class="card-content"><div class="card-title-row"><h3>마음껏 수다방</h3><span class="room-count"><span id="count-talk">0</span>명 함께</span></div>
+              <p>하고 싶은 말은 뭐든지.<br/>우리들의 이야기.</p>
+              <button class="enter-btn" data-room="talk">수다 떨러 들어가기 <span>↗</span></button>
+            </div>
+          </article>
+          <article class="room-card room-card-gym">
+            <div class="card-visual card-visual-gym">
+              <div class="mini-dumbbell"><span></span><b></b><span></span></div><div class="mini-fitness-word">MOVE<br/>WITH<br/>ME.</div>
+              <span class="mini-star-gym">✳</span><span class="visual-label">ROOM 03</span>
+            </div>
+            <div class="card-content"><div class="card-title-row"><h3>다이어트방</h3><span class="room-count"><span id="count-gym">0</span>명 함께</span></div>
+              <p>내 목표 몸무게를 정하고,<br/>순서대로 천천히 같이 움직여요.</p>
+              <button class="enter-btn" data-room="gym">운동하러 들어가기 <span>↗</span></button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <footer class="site-footer">오늘도 무사히, 오늘도 사랑하며. <span>© 선영아 사랑해야</span></footer>
+    </main>
+
+    <main id="roomView" class="room-view" hidden>
+      <nav class="room-navigation"><button id="backBtn" class="back-btn">← 다른 방 둘러보기</button><div class="room-nav-actions"><span id="connectionTag" class="connection-tag">연결 중</span><button id="shareBtn" class="share-btn" title="방 주소 복사">링크 공유 <span>↗</span></button></div></nav>
+      <div class="room-heading"><div><p id="roomNum" class="eyebrow">ROOM 01</p><h2 id="roomTitle">ㄴㅁ 인사방</h2><p id="roomDesc" class="room-description">같이 인사하는 공간</p></div><div class="in-room-number"><span class="online-indicator"></span><strong id="activeCount">1</strong><span>명 함께 있는 중</span></div></div>
+      <div class="room-layout">
+        <section class="scene-panel" aria-label="가상 커뮤니티 공간">
+          <div id="scene" class="scene scene-hello">
+            <div id="templeScene" class="scene-background temple-world">
+              <div class="temple-sky"></div><div class="cloud c1"></div><div class="cloud c2"></div>
+              <div class="temple-hill h1"></div><div class="temple-hill h2"></div><div class="temple-hill h3"></div>
+              <div class="temple-trees trees-left">♣ ♣</div><div class="temple-trees trees-right">♣ ♣</div>
+              <div class="temple-building"><div class="temple-gable"><span>✿</span></div><div class="temple-roof"></div><div class="temple-front"><div class="temple-pillar"></div><div class="temple-door">福</div><div class="temple-pillar"></div></div><div class="temple-steps"></div></div>
+              <div class="temple-lawn"></div><div class="lawn-path"></div><div class="floor-mat mat1"></div><div class="floor-mat mat2"></div><div class="floor-mat mat3"></div>
+            </div>
+            <div id="talkScene" class="scene-background talk-world" hidden>
+              <div class="talk-wall"></div><div class="talk-floor"></div><div class="talk-world-title"><em>우리들의 이야기</em> ♡</div>
+              <div id="celebrityPortraits" class="celebrity-portraits">
+                <div class="celebrity c-celeb1"><div class="portrait-shell"><img src="./assets/celebs/sung-sikyung.jpg" alt=""/><div class="portrait-fallback"><span class="generic-face face-one"></span></div></div><span>성시경</span></div>
+                <div class="celebrity c-celeb2"><div class="portrait-shell"><img src="./assets/celebs/eun-jiwon.jpg" alt=""/><div class="portrait-fallback"><span class="generic-face face-two"></span></div></div><span>은지원</span></div>
+                <div class="celebrity c-celeb3"><div class="portrait-shell"><img src="./assets/celebs/so-jisub.jpg" alt=""/><div class="portrait-fallback"><span class="generic-face face-three"></span></div></div><span>소지섭</span></div>
+                <div class="celebrity c-celeb4"><div class="portrait-shell"><img src="./assets/celebs/kang-dongwon.jpg" alt=""/><div class="portrait-fallback"><span class="generic-face face-four"></span></div></div><span>강동원</span></div>
+                <div class="celebrity c-celeb5"><div class="portrait-shell"><img src="./assets/celebs/seo-kangjun.jpg" alt=""/><div class="portrait-fallback"><span class="generic-face face-five"></span></div></div><span>서강준</span></div>
+                <div class="celebrity c-celeb6"><div class="portrait-shell"><img src="./assets/celebs/gong-yoo.jpg" alt=""/><div class="portrait-fallback"><span class="generic-face face-six"></span></div></div><span>공유</span></div>
+              </div>
+              <div class="talk-sofa"></div><div class="talk-rug"></div><div class="fan-art-caption">팬아트 스타일 초상 · 공식 참여와 무관</div>
+            </div>
+            <div id="gymScene" class="scene-background gym-world" hidden>
+              <div class="gym-wall"><div class="gym-wall-word">ONE STEP<br/>AT A TIME.</div><span class="gym-wall-flag">오늘도 나를 위해 ♡</span></div>
+              <div class="gym-mirror"></div><div class="gym-floor"></div>
+              <div class="gym-rack"><div class="rack-bar"></div><div class="rack-pillar a"></div><div class="rack-pillar b"></div><div class="gym-weights">●&nbsp; ●&nbsp; ●</div></div>
+              <div class="gym-treadmill"><div class="treadmill-screen"></div><div class="treadmill-bar"></div><div class="treadmill-belt"></div></div>
+              <div class="gym-bench"></div>
+              <div id="gymPerformer" class="gym-performer" aria-hidden="true"><div class="performer-figure"><span class="performer-head"></span><span class="performer-body"></span><span class="performer-arm arm-left"></span><span class="performer-arm arm-right"></span><span class="performer-leg leg-left"></span><span class="performer-leg leg-right"></span></div><span class="performer-label">ㄴㅁ</span></div>
+              <div id="gymEffect" class="gym-special-effect" aria-live="polite" aria-atomic="true"></div>
+              <div class="gym-station-buttons" aria-label="운동 기구 버튼">
+                <button type="button" class="gym-station" data-exercise="squat"><span class="gym-station-icon">↕</span><strong>스쿼트</strong><span class="scene-rep"> <b data-count="squat">0</b>회</span></button>
+                <button type="button" class="gym-station" data-exercise="fasting"><span class="gym-station-icon">忍</span><strong>굶기</strong><span class="scene-rep" id="fastingSceneLabel">시작하기</span></button>
+                <button type="button" class="gym-station" data-exercise="treadmill"><span class="gym-station-icon">♧</span><strong>런닝머신</strong><span class="scene-rep"><b data-count="treadmill">0</b>걸음</span></button>
+              </div>
+            </div>
+            <div id="avatars" class="avatars" aria-live="polite"></div>
+            <div class="scene-note" id="sceneNote">모두의 이름은 ㄴㅁ</div><div id="moveHint" class="move-hint">바닥을 눌러 내 ㄴㅁ 캐릭터를 움직여 보세요 ↗</div>
+          </div>
+          <div class="scene-bottom"><span id="sceneBottomHint">✿ 우리 여기서 함께 쉬어요</span><span id="memberSummary">1명이 이 방에 있어요</span></div>
+        </section>
+        <aside class="activity-panel">
+          <div class="panel-heading"><div><p class="panel-eyebrow">TOGETHER HERE</p><h3 id="panelTitle">여기 있는 이야기</h3></div><span class="panel-flower">✳</span></div>
+          <div id="regularActivity" class="regular-activity"><div id="messageFeed" class="message-feed" aria-live="polite"></div></div>
+          <div id="gymActivity" class="gym-activity" hidden>
+            <p class="gym-private-title">나만 보는 오늘의 목표</p><div class="goal-info"><strong id="myGoal">- kg</strong><span>목표 몸무게</span></div>
+            <div class="workout-round"><p class="eyebrow">12초씩 번갈아 운동해요</p><p id="workoutState">내 순서를 기다리는 중</p><div id="workoutExercise" class="workout-exercise">기구를 골라 보세요</div><div class="workout-timer"><span id="workoutSeconds">12</span>초 뒤 다음 차례</div></div>
+            <div class="workout-pick"><p class="workout-pick-heading">내 차례에 버튼을 눌러요 ♡</p>
+              <button type="button" class="exercise-btn" data-exercise="squat"><span class="exercise-emoji">↕</span><span class="exercise-description"><strong>스쿼트 하기</strong><small>누를 때마다 앉았다 일어나요</small></span><span class="exercise-reps"><b data-count="squat">0</b>회</span></button>
+              <button type="button" class="exercise-btn" data-exercise="treadmill"><span class="exercise-emoji">♧</span><span class="exercise-description"><strong>런닝머신 걷기</strong><small>한 번 누르면 한 걸음!</small></span><span class="exercise-reps"><b data-count="treadmill">0</b>걸음</span></button>
+              <button type="button" class="exercise-btn" data-exercise="fasting"><span class="exercise-emoji">忍</span><span class="exercise-description"><strong id="fastingButtonLabel">굶기 시작</strong><small>참을 인 · 나는 배부르다</small></span><span class="exercise-reps"><b data-count="fasting">0</b>번</span></button>
+              <p id="gymChantNote" class="gym-chant-note" aria-live="polite">버튼을 누르면 ‘忍’이 나타나요</p>
+            </div>
+            <p class="gym-caption">버튼을 누를 때 캐릭터가 움직이고 내 횟수가 올라가요. ‘굶기’는 재미로 보는 연출이며 실제 식사를 대신하지 않아요. 목표 몸무게는 다른 사람에게 보이지 않아요.</p>
+          </div>
+          <div id="helloControls" class="panel-controls"><p>이 방에서는 모두 <strong>ㄴㅁ</strong>만 말할 수 있어요.</p><button id="greetBtn" class="primary-action">ㄴㅁ 인사하기 <span>♡</span></button></div>
+          <form id="talkControls" class="talk-controls" hidden><label for="chatInput">하고 싶은 이야기를 남겨 보세요</label><div class="chat-input-row"><input id="chatInput" maxlength="200" autocomplete="off" placeholder="오늘 어떤 하루였어요?"/><button id="sendBtn" type="submit" aria-label="메시지 보내기">↗</button></div><p>이름은 모두 ㄴㅁ · 200자까지</p></form>
+          <div id="gymControls" class="gym-controls" hidden><p>✦ 누구와 경쟁하지 않고, 내 속도로 운동해요.</p><button id="cheerBtn" class="cheer-btn" type="button">운동하는 ㄴㅁ 응원하기 ♡</button></div>
+        </aside>
+      </div>
+    </main>
+    <div id="goalModal" class="modal-scrim" hidden>
+      <form id="goalForm" class="modal-card"><span class="modal-icon">♡</span><p class="eyebrow">ROOM 03 · 다이어트방</p><h2>오늘의 목표는<br/><em>몇 kg인가요?</em></h2><p class="modal-help">입장할 때 목표 몸무게만 적어 주세요.<br/>다른 사람에게 공개되지 않아요.</p><div class="weight-input-row"><input id="goalInput" type="number" inputmode="decimal" min="20" max="300" step="0.1" required placeholder="예: 58" aria-label="목표 몸무게"/><span>kg</span></div><div class="modal-buttons"><button type="button" id="cancelGoal">취소</button><button type="submit">운동방 입장 ↗</button></div></form>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  </div>
+</body>
+</html>
